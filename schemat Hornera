@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int tab[5];
+int x;
+
+int schematHornera(int tab[], int x)
+{
+    int wartosc = tab[0];
+
+    for(int i =1; i<5; i++)
+        wartosc = wartosc*x+tab[i];
+
+    return wartosc;
+}
+
+int main()
+{
+
+    for(int i = 0; i<5; i++)
+    {
+        cout << "Wpisz wspolczynniki od tego z najwieksza potega:" ;
+        cin >> tab[i];
+    }
+
+    cout<<"Podaj x:";
+    cin >> x;
+
+    cout<<"Wynik to:"<<schematHornera(tab,x);
+
+    return 0;
+}
